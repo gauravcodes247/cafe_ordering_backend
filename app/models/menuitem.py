@@ -38,7 +38,7 @@ class MenuItem(Base):
     )
     category_id:Mapped[int] = mapped_column(
         ForeignKey("categories.id"),
-        Integer,
+
         nullable=False
     )
     stock:Mapped[int] = mapped_column(

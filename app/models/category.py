@@ -11,7 +11,7 @@ class Category(Base):
     __tablename__ = "categories"
 
     id: Mapped[int] = mapped_column(
-        Integer,
+       
         primary_key=True,
         
     )
@@ -21,7 +21,7 @@ class Category(Base):
         unique = True,
         nullable = False
     )
-    description : Mapped[str] = mapped_column(
+    description : Mapped[str | None] = mapped_column(
         String(255),
         nullable = True
     )
