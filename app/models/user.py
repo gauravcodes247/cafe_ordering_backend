@@ -6,7 +6,7 @@ from app.db.database import Base
 class User(Base):
     __tablename__ = "users"
 
-    id: Mapped[id] = mapped_column(
+    id: Mapped[int] = mapped_column(
         Integer,
         primary_key=True,
         index = True
