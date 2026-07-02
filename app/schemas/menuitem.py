@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict
 from decimal import Decimal
-
+from app.schemas.category import CategorySummary
 
 class MenuItemCreate(BaseModel):
     name: str
@@ -29,6 +29,6 @@ class MenuItemResponse(BaseModel):
     price: Decimal
     image_url: str
     is_available: bool
-    category_id: int
     stock: int
+    category:CategorySummary
     model_config = ConfigDict(from_attributes=True)
